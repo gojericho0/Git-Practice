@@ -1,1 +1,21 @@
+git init #makes folder a git repository
 git clone (link) #pull repository from git hub to local machine
+
+1) Working Directory
+git status #show what files have been changed in working directory
+
+2) Staging Directory #Review, adjust, or remove changes before saving them permenatly
+git add -A #adds all files to staging directory
+git add . #stages files/folders in current directory
+git add * @stages new or modified files but not deleted ones
+git add <filename> #adds by file name
+git add *.txt #stages all text files in current directory
+git reset #unstages everything and brings changes to working directory
+
+3) Local Repository #Confirming and saving changes permenatly with commit
+git config --global user.email "youremailaddress" #sets email address globally
+git config --global user.name "yourusername" #sets email user address globally
+git config --local user.email "youremailaddress" sets email address to local repository
+git commit -m "message" #saves changes to files
+
+
