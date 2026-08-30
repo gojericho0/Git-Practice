@@ -1,0 +1,1 @@
+git clone (link) #pull repository from git hub to local machine
