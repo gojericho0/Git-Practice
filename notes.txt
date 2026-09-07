@@ -1,5 +1,7 @@
 git init #makes folder a git repository
-git clone (link) #pull repository from git hub to local machine
+git clone <link> #pull repository from git hub to local machine
+git log #see all versions of commits and comments
+git log --oneline #displays comments and versions in one line
 
 1) Working Directory
 git status #show what files have been changed in working directory
@@ -10,12 +12,41 @@ git add . #stages files/folders in current directory
 git add * @stages new or modified files but not deleted ones
 git add <filename> #adds by file name
 git add *.txt #stages all text files in current directory
-git reset #unstages everything and brings changes to working directory
+
+git rm file.txt #deletes and stages file
+git rm -f four.txt # force removes file from local and stage
+git rm --cached four.txt #removes four.txt from staging area
+git rm -r <folder> removes everything in folder and recusively
+
+
 
 3) Local Repository #Confirming and saving changes permenatly with commit
 git config --global user.email "youremailaddress" #sets email address globally
 git config --global user.name "yourusername" #sets email user address globally
 git config --local user.email "youremailaddress" sets email address to local repository
 git commit -m "message" #saves changes to files
+
+git reset HEAD~ #Undo the last commit and bring everything to working directory
+git reset --hard #undo everything in working directory and stage from the point of the last commit
+
+
+BRANCHES
+seperate environment to develop and merge to the main branch after review, test, and manage changes
+
+git branch <branch name> #creates branch
+git checkout <branch name> #switch to branch
+
+MERGED
+Combine the changes from two to one
+
+git merge main -m "Merging Main into Development"
+
+CHECKOUT #restores previous versions
+git checkout <log line> #head is the pointer
+
+DIFF 
+# Compares different commits
+# Use previous commit ID first then later commit
+#Red are removes and Green is added
 
 
